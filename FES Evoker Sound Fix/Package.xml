@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>FES Evoker Fix</name>
+  <id>sate.eventevokerfix</id>
+  <author>Sate, Commando</author>
+  <version>1.0</version>
+  <link>https://gamebanana.com/wips/68238</link>
+  <description>Replaces the Evoker sound used for events with the more powerful sound from FES.</description>
+</Metadata>

@@ -1,0 +1,162 @@
+import( "h06_07.bf" );
+import( "h06_07.msg" );
+import( "../../../../hangout.flow" );
+
+// Procedure Index: 15
+void school_shortcut_hook()
+{
+    int var5;
+    int var6;
+    int var7;
+    
+    if ( BIT_CHK( 3680 ) )
+    {
+        MSG_WND_DSP();
+        
+        if ( BIT_CHK( 4104 ) || BIT_CHK( 311 ) )
+        {
+            MSG( STOP_2F );
+        }
+        else 
+        {
+            MSG( STOP_2F_SANADA );
+        }
+
+        MSG_WND_CLS();
+        return;
+    }
+
+    var5 = FLD_GET_MINOR();
+    
+    if ( var5 == 1 )
+    {
+        
+        if ( GET_DAY( 4, 7 ) )
+        {
+            var6 = 1021;
+        }
+        else 
+        {
+            var6 = 409;
+        }
+
+    }
+    else if ( var5 == 2 )
+    {
+        var6 = 409;
+    }
+    else if ( var5 == 3 )
+    {
+        var6 = 473;
+    }
+    else if ( var5 == 4 )
+    {
+        var6 = 441;
+    }
+    else if ( var5 == 5 )
+    {
+        var6 = 409;
+    }
+    else if ( var5 == 7 )
+    {
+        
+        if ( GET_DAY( 4, 7 ) )
+        {
+            var6 = 1022;
+        }
+        else 
+        {
+            var6 = 411;
+        }
+
+    }
+    else if ( var5 == 11 )
+    {
+        var6 = 413;
+    }
+    else if ( var5 == 0x10 )
+    {
+        var6 = 409;
+    }
+    else if ( var5 == 20 )
+    {
+        var6 = 409;
+    }
+    else 
+    {
+        var6 = 0;
+    }
+
+    FUNCTION_002C( 14, 11 );
+    var7 = MSG_SELECT( FLD_ORDER, SCHOOL_SHOTCUTSELL, var6 );
+    
+    if ( var7 == 0 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 1, 1, 0 );
+    }
+    else if ( var7 == 1 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 7, 1, 0 );
+    }
+    else if ( var7 == 2 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 11, 1, 0 );
+    }
+    else if ( var7 == 3 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 0x10, 1, 0 );
+    }
+    else if ( var7 == 4 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 20, 0, 0 );
+    }
+    else if ( var7 == 5 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 4, 2, 0 );
+    }
+    else if ( var7 == 6 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 3, 0, 0 );
+    }
+    else if ( var7 == 7 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 5, 0, 0 );
+    }
+    else if ( var7 == 8 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 6, 2, 1, 0 );
+    }
+    else if ( var7 == 9 )
+    {
+        get_out_here();
+    }
+	else if ( var7 == 10 )
+    {
+		HangOut();
+    }
+    else 
+    {
+        MSG_WND_CLS();
+        return;
+    }
+
+    FUNCTION_003B();
+}

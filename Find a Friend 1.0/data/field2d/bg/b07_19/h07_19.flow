@@ -1,0 +1,173 @@
+import( "h07_19.bf" );
+import( "h07_19.msg" );
+import( "../../../../hangout.flow" );
+
+// Procedure Index: 17
+void dormitory_shortcut_hook()
+{
+    int var8;
+    int var9;
+    int var10;
+    
+    if ( GET_DAY( 4, 6 ) || GET_DAY( 4, 9 ) )
+    {
+        MSG_WND_DSP();
+        MSG( FIRST_DAY );
+        MSG_WND_CLS();
+        return;
+    }
+
+    var8 = FLD_GET_MINOR();
+    
+    if ( var8 == 2 )
+    {
+        
+        if ( BIT_CHK( 21 ) && ( FUNCTION_0030() != 3 ) )
+        {
+            var9 = 73;
+        }
+        else if ( BIT_CHK( 3592 ) )
+        {
+            var9 = 119;
+        }
+        else 
+        {
+            var9 = 81;
+        }
+
+    }
+    else if ( var8 == 3 )
+    {
+        
+        if ( BIT_CHK( 21 ) && ( FUNCTION_0030() != 3 ) )
+        {
+            var9 = 74;
+        }
+        else 
+        {
+            var9 = 82;
+        }
+
+    }
+    else if ( var8 == 4 )
+    {
+        
+        if ( BIT_CHK( 21 ) && ( FUNCTION_0030() != 3 ) )
+        {
+            var9 = 76;
+        }
+        else 
+        {
+            var9 = 84;
+        }
+
+    }
+    else if ( var8 == 5 )
+    {
+        var9 = 88;
+    }
+    else if ( var8 == 6 )
+    {
+        var9 = 88;
+    }
+    else if ( var8 == 9 )
+    {
+        return;
+    }
+    else if ( ( var8 == 19 ) || ( var8 == 20 ) )
+    {
+        
+        if ( BIT_CHK( 21 ) && ( FUNCTION_0030() != 3 ) )
+        {
+            var9 = 42;
+        }
+        else 
+        {
+            var9 = 50;
+        }
+
+    }
+    else 
+    {
+        return;
+    }
+
+    FUNCTION_002C( 14, 9 );
+    var10 = MSG_SELECT( FLD_ORDER, DORMITORY_SHOTCUTSELL, var9 );
+    
+    if ( var10 == 0 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 7, 2, 1, 0 );
+    }
+    else if ( var10 == 1 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 7, 3, 0, 0 );
+    }
+    else if ( var10 == 2 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 7, 4, 0, 0 );
+    }
+    else if ( var10 == 3 )
+    {
+        
+        if ( BIT_CHK( 3592 ) )
+        {
+            BIT_OFF( 3592 );
+            FADE( 3, 20 );
+            FUNCTION_000F();
+            CALL_EVENT( 129, 1 );
+            EVT_FUNCTION_0004( 1 );
+            BIT_ON( 21 );
+            CALL_DARK_HOUR();
+            FCL_FUNCTION_0017();
+            CALL_EVENT( 130, 1 );
+            BIT_ON( 22 );
+            BIT_ON( 2562 );
+            FCL_FUNCTION_0018();
+            NEXT_TIME();
+            return;
+        }
+        else 
+        {
+            FADE( 3, 20 );
+            FUNCTION_000F();
+            CALL_FIELD( 7, 5, 0, 0 );
+        }
+
+    }
+    else if ( var10 == 4 )
+    {
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        CALL_FIELD( 7, 6, 0, 0 );
+    }
+    else if ( var10 == 5 )
+    {
+        call_midnight_myroom();
+    }
+    else if ( var10 == 6 )
+    {
+        myroom_mybed();
+    }
+    else if ( var10 == 7 )
+    {
+        gVar140 = 0;
+        goout_dormitory();
+    }
+	else if ( var10 == 8 )
+    {
+		HangOut();
+    }
+    else 
+    {
+        MSG_WND_CLS();
+        return;
+    }
+
+}

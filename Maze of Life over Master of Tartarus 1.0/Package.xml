@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Maze of Life over Master of Tartarus</name>
+  <id>dexxtrip.mazeoflifeovermasteroftartarus</id>
+  <author>Dexxtrip</author>
+  <version>1.0</version>
+  <link />
+  <description>Replaces Master of Tartarus theme with Maze of Life from the Persona Q games.</description>
+  <skippedVersion>all</skippedVersion>
+</Metadata>

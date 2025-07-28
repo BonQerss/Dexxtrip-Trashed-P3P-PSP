@@ -1,0 +1,52 @@
+import( "h10_02.bf" );
+import( "h10_02.msg" );
+import( "../../../../hangout.flow" );
+
+// Procedure Index: 6
+void station_shortcut_hook()
+{
+    int var5;
+    int var6;
+    int var7;
+    var5 = FLD_GET_MINOR();
+    
+    if ( var5 == 1 )
+    {
+        var6 = 2;
+    }
+    else 
+    {
+        var6 = 1;
+    }
+
+    FUNCTION_002C( 14, 4 );
+    var7 = MSG_SELECT( FLD_ORDER, STATION_SHOTCUTSEL, var6 );
+    
+    if ( var7 == 0 )
+    {
+        FADE( 3, 20 );
+        CALL_FIELD( 10, 2, 0, 0 );
+    }
+    else if ( var7 == 1 )
+    {
+        FADE( 3, 20 );
+        CALL_FIELD( 10, 1, 1, 0 );
+    }
+    else if ( var7 == 2 )
+    {
+        BIT_ON( 3091 );
+        FADE( 3, 20 );
+        FUNCTION_000F();
+        FLD_SEL_EX( 2 );
+    }
+	else if ( var7 == 3 )
+    {
+		HangOut();
+    }
+    else 
+    {
+        MSG_WND_CLS();
+        return;
+    }
+
+}

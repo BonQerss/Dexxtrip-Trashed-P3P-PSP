@@ -1,0 +1,34 @@
+import( "h08_09.bf" );
+import( "h08_09.msg" );
+import( "../../../../hangout.flow" );
+
+// Procedure Index: 1
+void f008_009_shortcut_hook()
+{
+    int var0;
+    FUNCTION_002C( 14, 3 );
+    var0 = MSG_SELECT( FLD_ORDER, MALL_SHORTCUTT, 0 );
+    
+    if ( var0 == 0 )
+    {
+        HIT_SCRIPT_00();
+        return;
+    }
+    else if ( var0 == 1 )
+    {
+        BIT_ON( 3091 );
+        FADE( 3, 20 );
+        FLD_SEL_EX( 1 );
+        return;
+    }
+	else if ( var0 == 2 )
+	{
+		HangOut();
+	}
+    else 
+    {
+        MSG_WND_CLS();
+        return;
+    }
+
+}

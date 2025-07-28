@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Female Orpheus Telos</name>
+  <id>dexxtrip.femaleorpheustelos</id>
+  <author>Dexxtrip</author>
+  <version>1.0</version>
+  <link>https://gamebanana.com/mods/454519</link>
+  <description>Swaps Orpheus Telos model out for the female version and swaps the textures. </description>
+  <skippedVersion>1.01</skippedVersion>
+</Metadata>

@@ -1,0 +1,105 @@
+
+// 
+// FlowScript decompiled using Atlus Script Tools by TGE (2017-2021)
+// In the unfortunate case of any bugs, please report them back to me.
+// 
+
+
+// 
+// Imports
+// 
+
+import( "e560_020.bf.msg" );
+
+// 
+// Procedure declarations
+// 
+
+// Procedure Index: 0
+void e560_020()
+{
+    int var0;
+    CALL_BG_IMG( 10, 1, 1, 5 );
+    BGM( 43 );
+    FUNCTION_000D( 10 );
+    MSG_WND_DSP();
+    MSG( MSG_000 );
+    MSG_WND_CLS();
+    WAIT( 20 );
+    MSG_WND_DSP();
+    MSG( MSG_001 );
+    MSG( MSG_002 );
+    MSG_WND_CLS();
+    WAIT( 10 );
+    MSG_WND_DSP();
+    MSG( MSG_003 );
+    MSG( MSG_004 );
+    var0 = SEL( SEL005 );
+    
+    if ( var0 == 0 )
+    {
+        MSG( MSG_006 );
+        MSG( MSG_007 );
+    }
+    else if ( var0 == 1 )
+    {
+        MSG( MSG_008 );
+    }
+    else if ( var0 == 2 )
+    {
+        MSG( MSG_009 );
+    }
+    else 
+    {
+        MSG( MSG_010 );
+    }
+
+    MSG_WND_CLS();
+    WAIT( 20 );
+    MSG_WND_DSP();
+    MSG( MSG_012 );
+    MSG( MSG_013 );
+    MSG_WND_CLS();
+    WAIT( 20 );
+    MSG_WND_DSP();
+    MSG( MSG_014 );
+    var0 = SEL( SEL015 );
+    
+    if ( var0 == 0 )
+    {
+        MSG( MSG_016 );
+    }
+    else 
+    {
+        MSG( MSG_017 );
+    }
+
+    MSG( MSG_018 );
+    MSG( MSG_019 );
+    MSG( MSG_020 );
+    MSG_WND_CLS();
+    WAIT( 20 );
+    CMM_SET_LV( 5, 2, 0 );
+    MSG_WND_DSP();
+    MSG( MSG_021 );
+    MSG_WND_CLS();
+    WAIT( 20 );
+    
+    if ( !BIT_CHK( 2607 ) )
+    {
+        FUNCTION_002D( 24 );
+        BIT_ON( 2607 );
+    }
+
+    MSG_WND_DSP();
+    MSG( MSG_022 );
+    MSG_WND_CLS();
+    FADE( 3, 0 );
+    MSG_WND_DSP();
+    MSG( MSG_023 );
+    BIT_ON( 3040 );
+    MSG_WND_CLS();
+    EVT_FUNCTION_0001();
+    BGM_STOP( 0 );
+}
+

@@ -1,0 +1,283 @@
+import( "dungeonat.bf" );
+
+// Procedure Index: 22
+void tartaros_upstair_hook()
+{
+    gVar37 = FLD_FUNCTION_0004();
+    check_party_member();
+    
+    if ( ( gVar100 >= 1 ) || ( gVar22 >= 1 ) )
+    {
+        MSG_WND_DSP();
+        FUNCTION_0064( 0, 0, 0, gVar96, 2, 0, 0 );
+        
+        if ( ( gVar22 >= 1 ) && ( gVar100 >= 1 ) )
+        {
+            MSG( gVar71 );
+        }
+        else if ( gVar100 >= 1 )
+        {
+            MSG( gVar72 );
+        }
+        else if ( gVar22 >= 1 )
+        {
+            MSG( gVar73 );
+        }
+
+        FUNCTION_002C( 14, 1 );
+        
+        if ( SEL( gVar79 ) != 0 )
+        {
+            FUNCTION_0065( 0 );
+            MSG_WND_CLS();
+            return;
+        }
+
+        MSG( gVar77 );
+        FUNCTION_0065( 0 );
+        MSG_WND_CLS();
+    }
+    else if ( FLD_FUNCTION_005B() != -1 )
+    {
+        MSG_WND_DSP();
+        FUNCTION_0064( 0, 0, 0, gVar96, 2, 0, 0 );
+        MSG( gVar74 );
+        FUNCTION_002C( 14, 1 );
+        
+        if ( SEL( gVar79 ) != 0 )
+        {
+            FUNCTION_0065( 0 );
+            MSG_WND_CLS();
+            return;
+        }
+
+        MSG( gVar75 );
+        FUNCTION_0065( 0 );
+        MSG_WND_CLS();
+    }
+
+    leave_member_partyout();
+    item_transfer_all();
+    FADE( 3, 20 );
+    FUNCTION_000F();
+    auto_heal();
+    call_next_level();
+}
+
+// Procedure Index: 32
+void auto_heal()
+{
+int maxhealth;
+int maxsp;
+int currenthealth;
+int currentsp;
+int SP_Lost;
+int HPtoheal;
+int nextsp;
+int sethp;
+int setsp;
+
+if ( gVar23 == 1 ) {
+maxhealth = GET_MAXHP( 2 );
+maxsp = GET_MAXSP( 2 );
+currenthealth = GET_HP( 2 );
+currentsp = GET_SP( 2 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 2, sethp );
+	SET_SP( 2, setsp );
+}
+else 
+{
+SET_HP( 2, maxhealth );
+SET_SP( 2, SP_Lost );
+}
+}
+if ( gVar24 == 1 ) {
+
+maxhealth = GET_MAXHP( 3 );
+maxsp = GET_MAXSP( 3 );
+currenthealth = GET_HP( 3 );
+currentsp = GET_SP( 3 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 3, sethp );
+	SET_SP( 3, setsp );
+}
+else 
+{
+SET_HP( 3, maxhealth );
+SET_SP( 3, SP_Lost );
+}
+}
+if ( gVar25 == 1 ) {
+
+maxhealth = GET_MAXHP( 4 );
+maxsp = GET_MAXSP( 4 );
+currenthealth = GET_HP( 4 );
+currentsp = GET_SP( 4 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 4, sethp );
+	SET_SP( 4, setsp );
+}
+else 
+{
+SET_HP( 4, maxhealth );
+SET_SP( 4, SP_Lost );
+}
+}
+if ( gVar26 == 1 ) {
+
+maxhealth = GET_MAXHP( 5 );
+maxsp = GET_MAXSP( 5 );
+currenthealth = GET_HP( 5 );
+currentsp = GET_SP( 5 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 5, sethp );
+	SET_SP( 5, setsp );
+}
+else 
+{
+SET_HP( 5, maxhealth );
+SET_SP( 5, SP_Lost );
+}
+}
+if ( gVar27 == 1 ) {
+
+maxhealth = GET_MAXHP( 7 );
+maxsp = GET_MAXSP( 7 );
+currenthealth = GET_HP( 7 );
+currentsp = GET_SP( 7 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 7, sethp );
+	SET_SP( 7, setsp );
+}
+else 
+{
+SET_HP( 7, maxhealth );
+SET_SP( 7, SP_Lost );
+}
+}
+if ( gVar28 == 1 ) {
+
+maxhealth = GET_MAXHP( 8 );
+maxsp = GET_MAXSP( 8 );
+currenthealth = GET_HP( 8 );
+currentsp = GET_SP( 8 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 8, sethp );
+	SET_SP( 8, setsp );
+}
+else 
+{
+SET_HP( 8, maxhealth );
+SET_SP( 8, SP_Lost );
+}
+}
+if ( gVar29 == 1 ) {
+
+maxhealth = GET_MAXHP( 9 );
+maxsp = GET_MAXSP( 9 );
+currenthealth = GET_HP( 9 );
+currentsp = GET_SP( 9 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 9, sethp );
+	SET_SP( 9, setsp );
+}
+else 
+{
+SET_HP( 9, maxhealth );
+SET_SP( 9, SP_Lost );
+}
+}
+if ( gVar30 == 1 ) {
+maxhealth = GET_MAXHP( 10 );
+maxsp = GET_MAXSP( 10 );
+currenthealth = GET_HP( 10 );
+currentsp = GET_SP( 10 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 10, sethp );
+	SET_SP( 10, setsp );
+}
+else 
+{
+SET_HP( 10, maxhealth );
+SET_SP( 10, SP_Lost );
+}
+}
+maxhealth = GET_MAXHP( 1 );
+maxsp = GET_MAXSP( 1 );
+currenthealth = GET_HP( 1 );
+currentsp = GET_SP( 1 );
+
+HPtoheal = ( ( ( maxhealth - currenthealth ) / 4 ) * 0.20 );
+
+SP_Lost = ( currentsp - HPtoheal );
+if ( HPtoheal >= currentsp )
+{
+	setsp = ( currentsp - currentsp );
+	sethp = ( currenthealth + ( currentsp * 4 ) );
+	SET_HP( 1, sethp );
+	SET_SP( 1, setsp );
+}
+else 
+{
+SET_HP( 1, maxhealth );
+SET_SP( 1, SP_Lost );
+}
+}
+

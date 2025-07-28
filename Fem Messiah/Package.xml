@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Fem Messiah (PSP)</name>
+  <id>femmessiahpsp</id>
+  <author>A Mudkip, Dexxtrip</author>
+  <version>1.0</version>
+  <link>https://gamebanana.com/mods/393759</link>
+  <description>A female messiah model with hair physics. 
+
+Includes both a portrait edit and the actual model with custom anims that have hair physics. 
+
+I was going to add coffins, but they broke and honestly it kind of makes sense that femc's Messiah wouldn't have them. </description>
+  <skippedVersion>1.01</skippedVersion>
+</Metadata>

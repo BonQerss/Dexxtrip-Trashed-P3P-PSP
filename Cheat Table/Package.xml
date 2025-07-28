@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Guaranteed Item Drops</name>
+  <id>cheattable</id>
+  <author>Dexxtrip</author>
+  <version>1.0</version>
+  <link />
+  <description>This mod guarantees item drops during enemy encounters. It is a complete functional recreation of the PC mod of the same name, designed to be as universal as possible. Use this mod on PSP, Vita, Emulation, Switch, or even PC!</description>
+  <skippedVersion>all</skippedVersion>
+</Metadata>
