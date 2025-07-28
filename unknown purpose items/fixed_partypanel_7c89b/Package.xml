@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>Fixed Partypanel</name>
+  <id>wxnder.fixedpartypanel</id>
+  <author>wxnder, Kris!</author>
+  <version>1.4</version>
+  <link>https://gamebanana.com/mods/333372</link>
+  <description>Makes the outline around the healthbar fully wrap around</description>
+</Metadata>
